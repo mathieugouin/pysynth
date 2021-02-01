@@ -71,9 +71,9 @@ def get_hammond_note(setting, note, t):
     # DB setting 0-8
     # 0 = OFF
     # 8 = Full ON
-    # 1 step = 3- dB
+    # 1 step = -3 dB
     # power_db = 20 * log10(amp / amp_ref)
-    # db = 20 * np.log10(a / 1)
+    # power_db = 20 * np.log10(a / 1)
     # a = 10 ** (db / 20)
     def db_amplitude(s):
         return (s != 0) * 10 ** (10 * np.log10(1.0/2) * (8.0 - s) / 20)
